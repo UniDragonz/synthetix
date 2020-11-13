@@ -511,6 +511,11 @@ const deploy = async ({
 		args: [account, ZERO_ADDRESS, ZERO_ADDRESS],
 	});
 
+	await deployer.deployContract({
+		name: 'RewardEscrowV2',
+		args: [account, ZERO_ADDRESS, ZERO_ADDRESS],
+	});
+
 	const synthetixEscrow = await deployer.deployContract({
 		name: 'SynthetixEscrow',
 		args: [account, ZERO_ADDRESS],
